@@ -1,2 +1,5 @@
 # DarianDay
-Converter in C# from Gregorian Calendar to Darian Calendar dates
+
+This application converts dates and times in the Gregorian Calendar familiar to most to dates and times in the Darian Calendar, invented by engineer and astrophysicist Thomas Gangele and named after his son Darius.
+
+The code here is largely based on a JavaScript converter available on Mr. Gangele's personal site, located at http://ops-alaska.com/time/gangale_converter/calendar_clock.htm. It has been modified as necessary to facilitate desktop compilation, as well as for ease of use in a console window. Other code has also been written and inserted for smaller purposes such as: a "running" clock that updates every tenth of a second; preventing constant flickering in the text as a result of refreshing this running clock; and formatting the text to prevent mangling of wrapped around lines. Certain features have also been removed, including variable day length correction which was too difficult to properly rewrite in C# (though this is mostly handled by new code that I inserted).
