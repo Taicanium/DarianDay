@@ -261,12 +261,10 @@ namespace DarianDay
             int doI = doII;
 
             int sI;
-            var leap = false;
             if (sII == 0 && (sX != 0 || (sX == 0 && sC == 0)))
             {
                 sI = (int)Math.Floor((double)(doII / 669));
                 if (sI != 0) doI -= 669;
-                leap = true;
             }
             else	// 668, 669
             {
@@ -275,6 +273,7 @@ namespace DarianDay
             }
 
             marsYear = (int)(500 * sD + 100 * sC + 10 * sX + 2 * sII + sI);
+            var leap = (marsYear % 2 == 1 || marsYear % 10 == 0);
 
             // get the date from the day of the year:
 
@@ -299,6 +298,7 @@ namespace DarianDay
             var shortMonth = (marsMonth % 6 == 0 && (marsMonth != 24 || leap == false));
 
             marsDay += Math.Floor(correctionTmp);
+            doI += (int)Math.Floor(correctionTmp);
             while (marsDay > 28 || (marsDay > 27 && shortMonth))
             {
                 marsDay -= (shortMonth ? 27 : 28);
@@ -306,8 +306,11 @@ namespace DarianDay
                 if (marsMonth > 24)
                 {
                     marsYear += 1;
-                    marsMonth -= 23;
+                    marsMonth -= 24;
+                    doI -= (leap ? 669 : 668);
                 }
+                leap = (marsYear % 2 == 1 || marsYear % 10 == 0);
+                shortMonth = (marsMonth % 6 == 0 && (marsMonth != 24 || leap == false));
             }
 
             var SolNomen = AToD(InSolNomen);
