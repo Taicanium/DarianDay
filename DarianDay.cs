@@ -510,7 +510,7 @@ namespace DarianDay
             if (doI == 58)
                 ThisSol = "";
             if (doI == 59)
-                ThisSol = "On this sol in 171: The motion picture \"Mars\" was released.\nOn this sol in 189: Mariner 3 failed during launch.\nOn this day in 215: The Thirteeth Australian Mars Exploration Conference opened in Sydney, New South Wales.";
+                ThisSol = "On this sol in 171: The motion picture \"Mars\" was released.\nOn this sol in 189: Mariner 3 failed during launch.\nOn this sol in 215: The Thirteeth Australian Mars Exploration Conference opened in Sydney, New South Wales.";
             if (doI == 60)
                 ThisSol = "On this sol in 208: A meteorite, designated Sayh al Uhaymir 051, was discovered near Sayh al Uhaymir, Oman. The meteorite was later identified as having originated on Mars.";
             if (doI == 61)
@@ -558,7 +558,7 @@ namespace DarianDay
             if (doI == 82)
                 ThisSol = "On this sol in 205: Jerry Oltion‘s \"The Great Martian Pyramid Hoax\" was published in \"The Magazine of Fantasy and Science Fiction\" (date approximate).";
             if (doI == 83)
-                ThisSol = "On this sol in 127: Kurd Lasswitz was born, author of \"Two Planets.\"\nOn this sol in 153: As documented by Thomas Flournoy in his classic study in psychology \"From India to the Planet Mars: A Study of a Case of Somnambulism,\" the spiritualist medium Catherine Elise Mueller (a.k.a. Helene Smith) engaged in the ninth of a series of 34 seances, in which she communicated with Martians, spoke in their language, and wrote in Martian script.\nOn this sol in 189: Zond 2 was launched.\nOn this day in 209: The Second Australian Mars Exploration Conference opened in Sydney, New South Wales.";
+                ThisSol = "On this sol in 127: Kurd Lasswitz was born, author of \"Two Planets.\"\nOn this sol in 153: As documented by Thomas Flournoy in his classic study in psychology \"From India to the Planet Mars: A Study of a Case of Somnambulism,\" the spiritualist medium Catherine Elise Mueller (a.k.a. Helene Smith) engaged in the ninth of a series of 34 seances, in which she communicated with Martians, spoke in their language, and wrote in Martian script.\nOn this sol in 189: Zond 2 was launched.\nOn this sol in 209: The Second Australian Mars Exploration Conference opened in Sydney, New South Wales.";
             if (doI == 84)
                 ThisSol = "On this sol in 215: The Thirteenth European Mars Convention opened in Paris, France.";
             if (doI == 85)
@@ -680,7 +680,7 @@ namespace DarianDay
             if (doI == 143)
                 ThisSol = "On this sol in 213: Contact with Mars Exploration Rover A (Spirit) was lost.";
             if (doI == 144)
-                ThisSol = "On this sol in 207: Mars Climate Orbiter was launched.\nOn this day in 210: The Fourth Australian Mars Exploration Conference opened in Adelaide, South Australia.";
+                ThisSol = "On this sol in 207: Mars Climate Orbiter was launched.\nOn this sol in 210: The Fourth Australian Mars Exploration Conference opened in Adelaide, South Australia.";
             if (doI == 145)
                 ThisSol = "On this sol in 181: Japanese astronomer Sadao Saeki saw a huge explosion on Mars which produced a mushroom cloud 1450 km in diameter \"like the terrific explosion of a volcano.\" No other people observed this explosion.";
             if (doI == 146)
@@ -796,7 +796,7 @@ namespace DarianDay
             if (doI == 201)
                 ThisSol = "";
             if (doI == 202)
-                ThisSol = "On this day in 212: The Eighth Australian Mars Exploration Conference opened in Adelaide, South Australia.";
+                ThisSol = "On this sol in 212: The Eighth Australian Mars Exploration Conference opened in Adelaide, South Australia.";
             if (doI == 203)
                 ThisSol = "";
             if (doI == 204)
@@ -890,7 +890,7 @@ namespace DarianDay
             if (doI == 248)
                 ThisSol = "On this sol in 195: Viking Orbiter 1 frame 70A13 imaged the Cydonia Face and Pyramids.";
             if (doI == 249)
-                ThisSol = "On this day in 213: The Tenth Australian Mars Exploration Conference opened in Melbourne, Victoria.";
+                ThisSol = "On this sol in 213: The Tenth Australian Mars Exploration Conference opened in Melbourne, Victoria.";
             if (doI == 250)
                 ThisSol = "";
             if (doI == 251)
@@ -906,7 +906,7 @@ namespace DarianDay
             if (doI == 256)
                 ThisSol = "";
             if (doI == 257)
-                ThisSol = "On this day in 211: The Sixth Australian Mars Exploration Conference opened in Melbourne, Victoria.";
+                ThisSol = "On this sol in 211: The Sixth Australian Mars Exploration Conference opened in Melbourne, Victoria.";
             if (doI == 258)
                 ThisSol = "On this sol in 215: The Second Humans to Mars Summit opened in Washington, DC.";
             if (doI == 259)
@@ -948,7 +948,7 @@ namespace DarianDay
             if (doI == 277)
                 ThisSol = "";
             if (doI == 278)
-                ThisSol = "On this day in 188: Philip K. Dick‘s \"All We Marsmen\" began serialization in \"Worlds of Tomorrow\" (date approximate).";
+                ThisSol = "On this sol in 188: Philip K. Dick‘s \"All We Marsmen\" began serialization in \"Worlds of Tomorrow\" (date approximate).";
             if (doI == 279)
                 ThisSol = "On this sol in 181: The motion picture \"Rocketship X-M\" was released.\nOn this sol in 191: Mariner 7 was launched.";
             if (doI == 280)
@@ -1064,7 +1064,7 @@ namespace DarianDay
             if (doI == 335)
                 ThisSol = "On this sol in 153: As documented by Thomas Flournoy in his classic study in psychology \"From India to the Planet Mars: A Study of a Case of Somnambulism,\" the spiritualist medium Catherine Elise Mueller (a.k.a. Helene Smith) engaged in the 17th of a series of 34 seances, in which she communicated with Martians, spoke in their language, and wrote in Martian script.\nOn this sol in 188: The television series \"My Favorite Martian\" debuted.\nOn this sol in 205: Sailor Mars first appeared in \"An Uncharmed Life\" episode of the animated television series \"Sailor Moon\" (USA air date).";
             if (doI == 336)
-                ThisSol = "On this day in 208: The First Australian Mars Exploration Conference opened in Melbourne, Victoria.";
+                ThisSol = "On this sol in 208: The First Australian Mars Exploration Conference opened in Melbourne, Victoria.";
             if (doI == 337)
                 ThisSol = "";
             if (doI == 338)
@@ -1104,11 +1104,11 @@ namespace DarianDay
             if (doI == 355)
                 ThisSol = "On this sol in 158: During the War of the Worlds, the Martians launched the fifth of ten cylinders toward Earth.";
             if (doI == 356)
-                ThisSol = "On this sol in 152: As documented by Thomas Flournoy in his classic study in psychology \"From India to the Planet Mars: A Study of a Case of Somnambulism,\" the spiritualist medium Catherine Elise Mueller (a.k.a. Helene Smith) engaged in the first of a series of 34 seances, in which she communicated with Martians, spoke in their language, and wrote in Martian script.\nOn this sol in 158: During the War of the Worlds, the Martians launched the sixth of ten cylinders toward Earth.\nOn this sol in 189: \"I say let‘s do it quickly and establish a foothold on a new planet while we still have one left to take off from.\" --Wernher von Braun, \"Manned Mars Landing,\" \"Aviation Week & Space Technology.\"\nOn this sol in 208: Approximate time setting for \"June 2001: And the Moon Be Still as Bright\" in Ray Bradbury‘s \"The Martian Chronicles.\"\nOn this day in 214: The Twelfth Australian Mars Exploration Conference opened in Canberra, ACT.";
+                ThisSol = "On this sol in 152: As documented by Thomas Flournoy in his classic study in psychology \"From India to the Planet Mars: A Study of a Case of Somnambulism,\" the spiritualist medium Catherine Elise Mueller (a.k.a. Helene Smith) engaged in the first of a series of 34 seances, in which she communicated with Martians, spoke in their language, and wrote in Martian script.\nOn this sol in 158: During the War of the Worlds, the Martians launched the sixth of ten cylinders toward Earth.\nOn this sol in 189: \"I say let‘s do it quickly and establish a foothold on a new planet while we still have one left to take off from.\" --Wernher von Braun, \"Manned Mars Landing,\" \"Aviation Week & Space Technology.\"\nOn this sol in 208: Approximate time setting for \"June 2001: And the Moon Be Still as Bright\" in Ray Bradbury‘s \"The Martian Chronicles.\"\nOn this sol in 214: The Twelfth Australian Mars Exploration Conference opened in Canberra, ACT.";
             if (doI == 357)
                 ThisSol = "On this sol in 158: During the War of the Worlds, the Martians launched the seventh of ten cylinders toward Earth.";
             if (doI == 358)
-                ThisSol = "On this sol in 158: During the War of the Worlds, the Martians launched the eighth of ten cylinders toward Earth.\nOn this day in 187: NASA‘s Office of Manned Space Flight published its \"Long Range Plan,\" which projected the launch of a manned Mars flyby mission in 192 and a manned Mars landing mission in 194.";
+                ThisSol = "On this sol in 158: During the War of the Worlds, the Martians launched the eighth of ten cylinders toward Earth.\nOn this sol in 187: NASA‘s Office of Manned Space Flight published its \"Long Range Plan,\" which projected the launch of a manned Mars flyby mission in 192 and a manned Mars landing mission in 194.";
             if (doI == 359)
                 ThisSol = "On this sol in 158: During the War of the Worlds, the Martians launched the ninth of ten cylinders toward Earth.";
             if (doI == 360)
@@ -1366,7 +1366,7 @@ namespace DarianDay
             if (doI == 486)
                 ThisSol = "";
             if (doI == 487)
-                ThisSol = "On this day in 209: The Third Australian Mars Exploration Conference opened in Perth, Western Australia.";
+                ThisSol = "On this sol in 209: The Third Australian Mars Exploration Conference opened in Perth, Western Australia.";
             if (doI == 488)
                 ThisSol = "";
             if (doI == 489)
@@ -1428,7 +1428,7 @@ namespace DarianDay
             if (doI == 517)
                 ThisSol = "";
             if (doI == 518)
-                ThisSol = "On this day in 210: The Fifth Australian Mars Exploration Conference opened in Canberra, ACT.";
+                ThisSol = "On this sol in 210: The Fifth Australian Mars Exploration Conference opened in Canberra, ACT.";
             if (doI == 519)
                 ThisSol = "On this sol in 186: Arthur C. Clarke‘s \"Crime on Mars,\" later titled \"The Trouble with Time,\" was published in \"Ellery Queen\" (date approximate).";
             if (doI == 520)
@@ -1438,7 +1438,7 @@ namespace DarianDay
             if (doI == 522)
                 ThisSol = "";
             if (doI == 523)
-                ThisSol = "On this day in 211: The Seventh Australian Mars Exploration Conference opened in Perth, Western Australia.";
+                ThisSol = "On this sol in 211: The Seventh Australian Mars Exploration Conference opened in Perth, Western Australia.";
             if (doI == 524)
                 ThisSol = "";
             if (doI == 525)
@@ -1530,7 +1530,7 @@ namespace DarianDay
             if (doI == 568)
                 ThisSol = "On this sol in 197: \"The Case For Mars I\" conference opened in Boulder, Colorado.";
             if (doI == 569)
-                ThisSol = "On this day in 212: The Ninth Australian Mars Exploration Conference opened in Adelaide, South Australia.";
+                ThisSol = "On this sol in 212: The Ninth Australian Mars Exploration Conference opened in Adelaide, South Australia.";
             if (doI == 570)
                 ThisSol = "";
             if (doI == 571)
@@ -1626,7 +1626,7 @@ namespace DarianDay
             if (doI == 616)
                 ThisSol = "On this sol in 209: Two meteorites, designated Sayh al Uhaymir 130 and 131, were discovered near Dar al Sayh al Uhaymir, Oman. The meteorites were later identified as having originated on Mars.";
             if (doI == 617)
-                ThisSol = "On this sol in 165: The motion picture \"A Message from Mars\" was released.\nOn this sol in 186: Mars 1960A, the first known Mars mission, failed during launch.\nOn this day in 213: The Eleventh Australian Mars Exploration Conference opened in Perth, Western Australia.";
+                ThisSol = "On this sol in 165: The motion picture \"A Message from Mars\" was released.\nOn this sol in 186: Mars 1960A, the first known Mars mission, failed during launch.\nOn this sol in 213: The Eleventh Australian Mars Exploration Conference opened in Perth, Western Australia.";
             if (doI == 618)
                 ThisSol = "On this sol in 161: Edgar Rice Burroughs drew a map of Barsoom at the request of his publisher.";
             if (doI == 619)
