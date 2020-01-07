@@ -43,7 +43,7 @@ namespace DarianDay
         static string ThisSol;
 
         static int LeapDay;
-        
+
         static string InSolNomen;
 
         static bool DateSuccess = true;
@@ -2821,7 +2821,7 @@ namespace DarianDay
             // Convert to straight days:
 
             daysSince = GetEarthDaysFromForm();
-            
+
             daysSince += (new DateTime()).ToLocalTime().DayOfYear / 1440;
 
             // Convert days to sols:
@@ -2868,7 +2868,7 @@ namespace DarianDay
 
             daysSince = solsSince * MARS_TO_EARTH_DAYS + EPOCH_OFFSET
             + ROUND_UP_SECOND;
-            
+
             // Convert back to date, and put it in form:
             SetEarthDateFromDays(daysSince);
             SetMarsDateFromSols(solsSince);
@@ -2923,7 +2923,7 @@ namespace DarianDay
                 {
                     msg += "0";
                 }
-                msg += eSec + "." + (int)(eMil/100.0) + "\nWeekday " + eDayOfWeek + "/7, Month " + eMonth + "/12\n\n";
+                msg += eSec + "." + (int)(eMil / 100.0) + "\nWeekday " + eDayOfWeek + "/7, Month " + eMonth + "/12\n\n";
 
                 msg += mSolName + ", " + mMonthName + " " + mDay + ", " + mYear + " ";
                 if (mHour < 10)
@@ -2940,7 +2940,7 @@ namespace DarianDay
                 {
                     msg += "0";
                 }
-                msg += mSec + "." + (int)(mMil/100) + "\nWeekday " + mDayOfWeek + "/7, Month " + mMonth + "/24\n\n";
+                msg += mSec + "." + (int)(mMil / 100) + "\nWeekday " + mDayOfWeek + "/7, Month " + mMonth + "/24\n\n";
 
                 msg += ThisDay + "\n\n" + ThisSol + "\n\n";
 
@@ -2977,7 +2977,7 @@ namespace DarianDay
         {
             bool _APPRUNNING = true;
             string input;
-            
+
             InSolNomen = "1";
 
             FormatWrite("DarianDay: A Gregorian-to-Darian Calendar Converter\nBased on the JavaScript Darian Calculator available at http://ops-alaska.com");
@@ -3000,7 +3000,7 @@ namespace DarianDay
 
                 if (input == "")
                 {
-                    DateTime n = DateTime.Now;
+                    DateTime n = DateTime.UtcNow;
 
                     bool dateTemp = earthDate;
                     earthDate = true;
@@ -3053,9 +3053,9 @@ namespace DarianDay
 
                     while (_RUNNING)
                     {
-                        DateTime n = DateTime.Now;
+                        DateTime n = DateTime.UtcNow;
 
-                        while (DateTime.Now.Second == n.Second && DateTime.Now.Millisecond < n.Millisecond + 100)
+                        while (DateTime.UtcNow.Second == n.Second && DateTime.UtcNow.Millisecond < n.Millisecond + 100)
                         {
                             if (Console.KeyAvailable)
                             {
@@ -3063,7 +3063,7 @@ namespace DarianDay
                             }
                         }
 
-                        n = DateTime.Now;
+                        n = DateTime.UtcNow;
 
                         eYear = n.Year;
                         eMonth = n.Month;
