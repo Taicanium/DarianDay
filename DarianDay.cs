@@ -12,6 +12,11 @@ namespace DarianDay
             30, 58, 89, 119, 150, 180, 211, 242, 272, 303, 333 };
         static readonly int[] eDaysInMonth = { 0, 31, 29, 31, 30, 31, 30, 31, 31,
             30, 31, 30, 31 };
+		static readonly string[] mSolNomens = {
+			"Sol Solis", "Sol Lunae", "Sol Martis", "Sol Mercurii", "Sol Jovis", "Sol Veneris", "Sol Saturni", // Standard Darian nomenclature
+			"Axatisol", "Benasol", "Ciposol", "Domesol", "Erjasol", "Fulisol", "Gavisol", // Darian Defrost nomenclature
+			"Sunsol", "Phobosol", "Deimosol", "Terrasol", "Venusol", "Mercurisol", "Jovisol" // Standard Utopian nomenclature
+		};
 
         static int mYear;
         static int mMonth;
@@ -313,67 +318,10 @@ namespace DarianDay
                 shortMonth = (marsMonth % 6 == 0 && (marsMonth != 24 || leap == false));
             }
 
-            var SolNomen = AToD(InSolNomen);
+            var SolNomen = AToI(InSolNomen);
 
-            string nSolName = "";
             mDayOfWeek = (int)((marsDay - 1) % 7 + 1);
-
-            if (SolNomen == 1)
-            {
-                //Darian Sols of the Week
-                if ((marsDay - 1) % 7 + 1 == 1)
-                    nSolName = "Sol Solis";
-                if ((marsDay - 1) % 7 + 1 == 2)
-                    nSolName = "Sol Lunae";
-                if ((marsDay - 1) % 7 + 1 == 3)
-                    nSolName = "Sol Martis";
-                if ((marsDay - 1) % 7 + 1 == 4)
-                    nSolName = "Sol Mercurii";
-                if ((marsDay - 1) % 7 + 1 == 5)
-                    nSolName = "Sol Jovis";
-                if ((marsDay - 1) % 7 + 1 == 6)
-                    nSolName = "Sol Veneris";
-                if ((marsDay - 1) % 7 + 1 == 7)
-                    nSolName = "Sol Saturni";
-            }
-
-            else if (SolNomen == 2)
-            {
-                //Darian Defrost Sols of the Week
-                if ((marsDay - 1) % 7 + 1 == 1)
-                    nSolName = "Axatisol";
-                if ((marsDay - 1) % 7 + 1 == 2)
-                    nSolName = "Benasol";
-                if ((marsDay - 1) % 7 + 1 == 3)
-                    nSolName = "Ciposol";
-                if ((marsDay - 1) % 7 + 1 == 4)
-                    nSolName = "Domesol";
-                if ((marsDay - 1) % 7 + 1 == 5)
-                    nSolName = "Erjasol";
-                if ((marsDay - 1) % 7 + 1 == 6)
-                    nSolName = "Fulisol";
-                if ((marsDay - 1) % 7 + 1 == 7)
-                    nSolName = "Gavisol";
-            }
-
-            else if (SolNomen == 3)
-            {
-                //Utopian Sols of the Week
-                if ((marsDay - 1) % 7 + 1 == 1)
-                    nSolName = "Sunsol";
-                if ((marsDay - 1) % 7 + 1 == 2)
-                    nSolName = "Phobosol";
-                if ((marsDay - 1) % 7 + 1 == 3)
-                    nSolName = "Deimosol";
-                if ((marsDay - 1) % 7 + 1 == 4)
-                    nSolName = "Terrasol";
-                if ((marsDay - 1) % 7 + 1 == 5)
-                    nSolName = "Venusol";
-                if ((marsDay - 1) % 7 + 1 == 6)
-                    nSolName = "Mercurisol";
-                if ((marsDay - 1) % 7 + 1 == 7)
-                    nSolName = "Jovisol";
-            }
+			string nSolName = mSolNomens[((SolNomen - 1) * 7) + mDayOfWeek - 1];
 
             // Put the result up:
 
