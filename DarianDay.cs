@@ -15,7 +15,7 @@
 
 		static int mYear;
 		static int mMonth;
-		static string mMonthName;
+		static string? mMonthName;
 		static int mDay;
 		static int mDayOfWeek;
 		static int mHour;
@@ -23,15 +23,16 @@
 		static int mSec;
 		static int mMil;
 
-		static string mSolName;
-		static string eDayName;
+		static string? mSolName;
+		static string? eDayName;
+		static uint SolNomen = 1;
 
 		static int marsYear;
 		static int earthYear;
 
 		static int eYear;
 		static int eMonth;
-		static string eMonthName;
+		static string? eMonthName;
 		static int eDay;
 		static int eDayOfWeek;
 		static int eHour;
@@ -39,51 +40,15 @@
 		static int eSec;
 		static int eMil;
 
-		static string ThisDay;
-		static string ThisSol;
+		static string? ThisDay;
+		static string? ThisSol;
 
 		static int LeapDay;
-
-		static string InSolNomen;
 
 		static bool DateSuccess = true;
 		static bool earthDate = true;
 
 		static int cLineCount = 0;
-
-		static int AToI(string s)
-		{
-			int iOut = 0;
-
-			char[] cS = s.ToCharArray();
-
-			for (int i = 0; i < s.Length; i++)
-				iOut += (cS[i] - 48) * Pow(10, s.Length - (i + 1));
-
-			return iOut;
-		}
-
-		static int Pow(int x, int y)
-		{
-			int iOut = x;
-
-			if (y == 0)
-				return 1;
-
-			if (y < 0)
-				iOut = 1;
-
-			for (int i = 0; i < y; i++)
-			{
-				if (y < 0)
-					iOut /= x;
-
-				if (y > 0)
-					iOut *= x;
-			}
-
-			return iOut;
-		}
 
 		static void FormatWrite(string line)
 		{
@@ -133,15 +98,10 @@
 			&& IsEarthLeapYear(year))
 				daysSince -= 1;
 
-			double hour = (double)(eHour / 24.0);
-			double min = (double)(eMin / 1440.0);
-			double sec = (double)(eSec / 86400.0);
-			double mil = (double)(eMil / 86400000.0);
-
-			daysSince += hour;
-			daysSince += min;
-			daysSince += sec;
-			daysSince += mil;
+			daysSince += (double)(eHour / 24.0);
+			daysSince += (double)(eMin / 1440.0);
+			daysSince += (double)(eSec / 86400.0);
+			daysSince += (double)(eMil / 86400000.0);
 
 			return daysSince;
 		}
@@ -159,15 +119,10 @@
 			- Math.Floor((year - 1) / 100.0)
 			+ Math.Floor((year - 1) / 1000.0));
 
-			double hour = (double)(mHour / 24.0);
-			double min = (double)(mMin / 1440.0);
-			double sec = (double)(mSec / 86400.0);
-			double mil = (double)(mMil / 86400000.0);
-
-			solsSince += hour;
-			solsSince += min;
-			solsSince += sec;
-			solsSince += mil;
+			solsSince += (double)(mHour / 24.0);
+			solsSince += (double)(mMin / 1440.0);
+			solsSince += (double)(mSec / 86400.0);
+			solsSince += (double)(mMil / 86400000.0);
 
 			return solsSince;
 		}
@@ -265,8 +220,6 @@
 				leap = marsYear % 2 == 1 || marsYear % 10 == 0;
 				shortMonth = marsMonth % 6 == 0 && (marsMonth != 24 || leap == false);
 			}
-
-			var SolNomen = AToI(InSolNomen);
 
 			mDayOfWeek = (int)((marsDay - 1) % 7 + 1);
 			string nSolName = mSolNomens[((SolNomen - 1) * 7) + mDayOfWeek - 1];
@@ -644,10 +597,7 @@
 			}).Replace("%S", "On this sol in ");
 
 			double MarsSolNum = doI + 1;
-			mMonth = new List<int>([
-				28, 56, 84, 112, 140, 167, 195, 223, 251, 279, 307, 334, 362, 390, 418, 446, 474, 501, 529, 557, 585, 613, 641, 669
-				]).FindIndex(n => n >= MarsSolNum)
-				+ 1;
+			mMonth = new List<int>([28, 56, 84, 112, 140, 167, 195, 223, 251, 279, 307, 334, 362, 390, 418, 446, 474, 501, 529, 557, 585, 613, 641, 669]).FindIndex(n => n >= MarsSolNum) + 1;
 
 			mMonthName = mMonth switch
 			{
@@ -1220,8 +1170,9 @@
 		static void Main()
 		{
 			bool _APPRUNNING = true;
+			bool _CLOCK;
+			bool dateTemp;
 			string? input;
-			InSolNomen = "1";
 
 			FormatWrite("DarianDay: A Gregorian-to-Darian Calendar Converter\nBased on the JavaScript Darian Calculator available at http://ops-alaska.com");
 
@@ -1245,7 +1196,7 @@
 					case "":
 						dtCapture = DateTime.UtcNow;
 
-						bool dateTemp = earthDate;
+						dateTemp = earthDate;
 						earthDate = true;
 
 						eYear = dtCapture.Year;
@@ -1265,28 +1216,28 @@
 						FormatWrite("Press 2 for the Darian Defrost nomenclature.");
 						FormatWrite("Press 3 for the standard Utopian nomenclature.");
 
-						ConsoleKeyInfo cInput = Console.ReadKey();
-						List<string> nomenclatures = ["1", "2", "3"];
-
-						InSolNomen = cInput.KeyChar.ToString();
-						if (!nomenclatures.Contains(InSolNomen))
+						SolNomen = uint.Parse(Console.ReadKey().KeyChar.ToString());
+						if (SolNomen < 0 || SolNomen > 2)
+						{
+							SolNomen = 1;
 							FormatWrite("Invalid selection.");
+						}
 						else
 							Console.Clear();
 
 						break;
 					case "r":
-						bool _RUNNING = true;
 						dateTemp = earthDate;
 						earthDate = true;
+						_CLOCK = true;
 
-						while (_RUNNING)
+						while (_CLOCK)
 						{
 							dtCapture = DateTime.UtcNow;
 
 							while (DateTime.UtcNow.Subtract(dtCapture).Milliseconds < 100)
 								if (Console.KeyAvailable)
-									_RUNNING = false;
+									_CLOCK = false;
 
 							dtCapture = DateTime.UtcNow;
 
@@ -1315,32 +1266,25 @@
 						{
 							try
 							{
-								double S = double.Parse(n[2]);
-								int m = int.Parse(n[1]);
-								int H = int.Parse(n[0]);
-								int D = int.Parse(n[3]);
-								int M = int.Parse(n[4]);
-								int Y = int.Parse(n[5]);
-
 								if (earthDate)
 								{
-									eYear = Y;
-									eMonth = M;
-									eDay = D;
-									eHour = H;
-									eMin = m;
-									eSec = (int)Math.Floor(S);
-									eMil = (int)(S % 1 * 1000);
+									eYear = int.Parse(n[5]);
+									eMonth = int.Parse(n[4]);
+									eDay = int.Parse(n[3]);
+									eHour = int.Parse(n[0]);
+									eMin = int.Parse(n[1]);
+									eSec = (int)Math.Floor(double.Parse(n[2]));
+									eMil = (int)(double.Parse(n[2]) % 1 * 1000);
 								}
 								else
 								{
-									mYear = Y;
-									mMonth = M;
-									mDay = D;
-									mHour = H;
-									mMin = m;
-									mSec = (int)Math.Floor(S);
-									mMil = (int)(S % 1 * 1000);
+									mYear = int.Parse(n[5]);
+									mMonth = int.Parse(n[4]);
+									mDay = int.Parse(n[3]);
+									mHour = int.Parse(n[0]);
+									mMin = int.Parse(n[1]);
+									mSec = (int)Math.Floor(double.Parse(n[2]));
+									mMil = (int)(double.Parse(n[2]) % 1 * 1000);
 								}
 
 								WriteDates();
